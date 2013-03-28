@@ -9,6 +9,7 @@
   <body>
     <h1>Hello, world!</h1>
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>hola
+    
   </body>
 </html>
