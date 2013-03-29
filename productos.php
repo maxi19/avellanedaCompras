@@ -81,6 +81,7 @@
 
       <!-- Example row of columns -->
       <div class="row">
+      	<div class="span8">
         <table class="table table-striped">
   		<tr>
   		<th> Nombre</th>
@@ -96,8 +97,32 @@
        		<td>maxi19@gmail.com</td>
        		<td>cuenca 1245</td>
         </tr>
-		</table>	        
-       
+		</table>	       
+		</div> 
+       			<div class="span4">
+				
+				<FORM action="pag2av.php" method="post" name="formAltaProductos">
+					<P>
+						<LABEL for="nombre">Nombre: </LABEL>
+						<INPUT type="text" id="nombre">
+						<BR>
+						<LABEL for="direccion">direccion: </LABEL>
+						<INPUT type="text" id="direccion">
+						<BR>
+						<LABEL for="email">email: </LABEL>
+						<INPUT type="text" id="email">
+						<BR>
+						<LABEL for="precio">precio: </LABEL>
+						<INPUT type="text" id="precio">
+						<BR>
+						<LABEL for="descripcion">descripcion: </LABEL>
+						<INPUT type="text" id="descripcion">
+						<BR>
+						<INPUT type="submit" value="Enviar">
+						<INPUT type="reset">
+					</P>
+					</form>
+			</div>
       </div>
 
       <hr>
