@@ -55,8 +55,7 @@ function crearRegistro($nombre,$descripcion,$precio,$direccion,$email){
 	$direccion = mysqli_real_escape_string($link, $direccion);
 	$email = mysqli_real_escape_string($link, $email);
 			
-	$result = mysqli_query($link, "insert into nombre productos(nombre,email,descripcion,precio,direccion) values ('$nombre','$email','$descripcion','$precio','$direccion')");
-	
+	if($result = mysqli_query($link, "insert into productos(nombre,email,descripcion,precio,direccion) values ('$nombre','$email','$descripcion','$precio','$direccion')"));
 	
 	cerrarConexion($link);
 	

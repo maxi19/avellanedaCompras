@@ -6,8 +6,6 @@
 		if (isset($_GET['accion'])) {
 			if ($_GET['accion']=="crear") {
 				
-				echo "entrooooooooooooo";
-				
 				$nombre = $_GET['nombre'];
 				$descripcion = $_GET['descripcion'];
 				$precio = $_GET['precio'];
