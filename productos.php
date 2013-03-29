@@ -29,9 +29,13 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+ 
+ 	<script src="script/formulario.js"></script>
+	<script src="script/prototype.js"></script>
+	
   </head>
 
-  <body>
+  <body onload="dameReservas()">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -89,14 +93,10 @@
   		<th> Precio</th>
 	  	<th> Email</th>
 	  	<th> Direccion</th>
-        </tr>	
-        <tr>
-        	<td>Remera</td>
-        	<td>Remera deportiva Adidas</td>
-       		<td> $ 40 </td>
-       		<td>maxi19@gmail.com</td>
-       		<td>cuenca 1245</td>
         </tr>
+        </table>	
+       <table class="table table-hover" id="listado">
+     
 		</table>	       
 		</div> 
        			<div class="span4">
