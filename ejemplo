@@ -1,0 +1,69 @@
+
+<?php
+	require ("funciones.php");
+	//VERIFICO SI TENGO UNA SESSION ABIERTA
+	seguridad();
+	
+	require ("mostrarListadoReservas.php");	
+	
+	$orden;
+	$reservas;
+	
+	if (isset($_GET['orden'])) {
+		$orden = $_GET['orden'];	
+		$nombre = $_GET['nombre'];
+		$reservas = ordenadoPor($nombre,$orden);	    
+			
+	} else {
+		$reservas = dameReservas();					
+	}
+	
+	
+	   
+	//LAS ENVIAMOS PARA QUE LAS MUESTRE   
+	mostrarReservas($reservas);
+
+
+
+?>
+
+------------------------
+
+
+<?php
+    
+    
+    function mostrarReservas($reservas)
+    {
+        
+		while ($row=mysqli_fetch_assoc($reservas)){ 
+		$nombre = $row['nombre'];	
+		$apellido = $row['apellido'];
+		$dni = $row['dni'];
+		$celular = $row['celular'];
+		$reserva = $row['reserva'];
+		
+		echo "<div class='reserva'>".
+		"<div class='tabs_txt'>".$nombre."</div>".
+				"<div class='tabs_txt'>".$apellido."</div>".
+						"<div class='tabs_txt'>".$dni."</div>".
+								"<div class='tabs_txt'>".$celular."</div>".
+									"<div class='tabs_txt'>".$reserva."</div>".		
+										"<li class='tabs_borrar' onclick='borrarElemento(".$dni.")'><a href='#'alt='borrar reserva'>borrar</a></li>".		
+		"</div>";
+	
+	
+		}
+		
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+?>
