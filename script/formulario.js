@@ -6,8 +6,8 @@ var ruta = "/workspace/avellanedaCompras/";
 
 function cargarProducto(){
 	
-   var params = Form.serialize('formularioProductos');
-   params = params + "&accion=cargar";
+   var params = Form.serialize('formAltaProductos');
+   params = params + "&accion=crear";
    var url   = ruta + "armarListadoProductos.php";
    var ajax = new Ajax.Updater('listado',url,
     	                                            {
@@ -22,8 +22,7 @@ function dameReservas () {
 	
    var params = "accion=listado";
    var url   = ruta + "armarListadoProductos.php";
-   alert(url);
-   var ajax = new Ajax.Updater('table table-hover',url,
+   var ajax = new Ajax.Updater('listado',url,
     	                                            {
         	                                        method:"GET",
             	                                    parameters:params													    

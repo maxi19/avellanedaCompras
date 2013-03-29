@@ -38,11 +38,35 @@ function dameProductos() {
 	
 	if ($results = mysqli_query($link, "select nombre,email,descripcion,precio,direccion from productos"));
 	
+	cerrarConexion($link);
+	
 	return $results;
 	
 }
 
+function crearRegistro($nombre,$descripcion,$precio,$direccion,$email){
+		
 
+	$link = conectarseDb();
+	
+	$nombre = mysqli_real_escape_string($link, $nombre);
+	$descripcion = mysqli_real_escape_string($link, $descripcion);
+	$precio = mysqli_real_escape_string($link, $precio);
+	$direccion = mysqli_real_escape_string($link, $direccion);
+	$email = mysqli_real_escape_string($link, $email);
+			
+	$result = mysqli_query($link, "insert into nombre productos(nombre,email,descripcion,precio,direccion) values ('$nombre','$email','$descripcion','$precio','$direccion')");
+	
+	
+	cerrarConexion($link);
+	
+	return $result;
+}
+
+
+function cerrarConexion($link){
+	mysqli_close($link);
+}
 
 
 ?>

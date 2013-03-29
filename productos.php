@@ -32,10 +32,12 @@
  
  	<script src="script/formulario.js"></script>
 	<script src="script/prototype.js"></script>
+	<script src="mvc/productos.js"></script>
+	
 	
   </head>
 
-  <body onload="dameReservas()">
+  <body>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -95,33 +97,37 @@
 	  	<th> Direccion</th>
         </tr>
         </table>	
-       <table class="table table-hover" id="listado">
      
-		</table>	       
+        <div id="listado">
+        	
+        	
+        </div>
+			        
 		</div> 
        			<div class="span4">
 				
-				<FORM action="pag2av.php" method="post" name="formAltaProductos">
+				<FORM action="" method="post" name="formAltaProductos" id="formAltaProductos">
 					<P>
 						<LABEL for="nombre">Nombre: </LABEL>
-						<INPUT type="text" id="nombre">
+						<INPUT type="text" id="nombre" name="nombre">
 						<BR>
 						<LABEL for="direccion">direccion: </LABEL>
-						<INPUT type="text" id="direccion">
+						<INPUT type="text" id="direccion" name="direccion">
 						<BR>
 						<LABEL for="email">email: </LABEL>
-						<INPUT type="text" id="email">
+						<INPUT type="text" id="email" name="email">
 						<BR>
 						<LABEL for="precio">precio: </LABEL>
-						<INPUT type="text" id="precio">
+						<INPUT type="text" id="precio" name="precio">
 						<BR>
 						<LABEL for="descripcion">descripcion: </LABEL>
-						<INPUT type="text" id="descripcion">
+						<INPUT type="text" id="descripcion" name="descripcion">
 						<BR>
-						<INPUT type="submit" value="Enviar">
-						<INPUT type="reset">
 					</P>
 					</form>
+						
+						<input type="button" value="publicar" class="btn btn-primary btn-large" onclick="cargarProducto()"/>
+
 			</div>
       </div>
 
