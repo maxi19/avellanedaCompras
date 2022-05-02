@@ -50,7 +50,7 @@ public class JwtAuthenticationController {
 		responseHeaders.set("Authentication",
 				token);
 
-		return new ResponseEntity(responseHeaders,HttpStatus.OK);
+		return new ResponseEntity<JwtResponse>(new JwtResponse(token),responseHeaders,HttpStatus.OK);
 	}
 
 	private void authenticate(String username, String password) throws Exception {
